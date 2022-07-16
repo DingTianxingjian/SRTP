@@ -7,6 +7,7 @@ import numpy as np
 '''
 def PointsToObj(obj_file_name, points):
     with open(file = obj_file_name, mode = 'w') as obj:
+        output = '# ' + repr(len(points) + '\n')
         for i in range(len(points)):
             output = 'v ' + repr(points[i][0]) + ' ' + repr(points[i][1]) + ' ' + repr(points[i][2]) + '\n'
             obj.write(output)
